@@ -77,7 +77,7 @@ export default function QuoteForm({ designState }: Props) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
                     <input 
                       {...register("fullName", { required: "Full name is required" })}
-                      className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-accent/50 ${errors.fullName ? 'border-red-500' : 'border-gray-200 focus:border-brand-accent'}`}
+                      className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-blue/50 ${errors.fullName ? 'border-red-500' : 'border-gray-200 focus:border-brand-blue'}`}
                       placeholder="John Doe"
                     />
                     {errors.fullName && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.fullName.message}</p>}
@@ -87,7 +87,7 @@ export default function QuoteForm({ designState }: Props) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Business / Organization</label>
                     <input 
                       {...register("businessName")}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue"
                       placeholder="Company Name"
                     />
                   </div>
@@ -99,7 +99,7 @@ export default function QuoteForm({ designState }: Props) {
                         required: "Phone number is required",
                         pattern: { value: /^[0-9+\-\s()]*$/, message: "Invalid phone format" }
                       })}
-                      className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-accent/50 ${errors.phone ? 'border-red-500' : 'border-gray-200 focus:border-brand-accent'}`}
+                      className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-blue/50 ${errors.phone ? 'border-red-500' : 'border-gray-200 focus:border-brand-blue'}`}
                       placeholder="+91 98765 43210"
                     />
                     {errors.phone && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.phone.message}</p>}
@@ -113,7 +113,7 @@ export default function QuoteForm({ designState }: Props) {
                         required: "Email is required",
                         pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "Invalid email address" }
                       })}
-                      className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-accent/50 ${errors.email ? 'border-red-500' : 'border-gray-200 focus:border-brand-accent'}`}
+                      className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-blue/50 ${errors.email ? 'border-red-500' : 'border-gray-200 focus:border-brand-blue'}`}
                       placeholder="john@example.com"
                     />
                     {errors.email && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle className="h-3 w-3" />{errors.email.message}</p>}
@@ -128,7 +128,7 @@ export default function QuoteForm({ designState }: Props) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Bottle Size *</label>
                     <select 
                       {...register("bottleSize", { required: "Please select a size" })}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue bg-white"
                     >
                       <option value="">Select Size</option>
                       {pricingData.products.map(p => (
@@ -146,7 +146,7 @@ export default function QuoteForm({ designState }: Props) {
                         required: "Quantity is required",
                         min: { value: 100, message: "Minimum order is 100 bottles" }
                       })}
-                      className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-accent/50 ${errors.quantity ? 'border-red-500' : 'border-gray-200 focus:border-brand-accent'}`}
+                      className={`w-full px-4 py-3 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-blue/50 ${errors.quantity ? 'border-red-500' : 'border-gray-200 focus:border-brand-blue'}`}
                       placeholder="e.g. 500"
                     />
                     {errors.quantity && <p className="text-red-500 text-xs mt-1">{errors.quantity.message}</p>}
@@ -157,7 +157,7 @@ export default function QuoteForm({ designState }: Props) {
                     <select 
                       {...register("designOrientation")}
                       defaultValue={designState?.orientation || 'vertical'}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue bg-white"
                     >
                       <option value="vertical">Vertical (Portrait / Tall)</option>
                       <option value="horizontal">Horizontal (Landscape / Wide)</option>
@@ -168,7 +168,7 @@ export default function QuoteForm({ designState }: Props) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Event / Business Type</label>
                     <select 
                       {...register("eventType")}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue bg-white"
                     >
                       <option value="">Select Type</option>
                       <option value="corporate">Corporate Event</option>
@@ -185,7 +185,7 @@ export default function QuoteForm({ designState }: Props) {
                     <input 
                       type="date"
                       {...register("deliveryDate")}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue"
                     />
                   </div>
                 </div>
@@ -195,7 +195,7 @@ export default function QuoteForm({ designState }: Props) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Branding Requirement</label>
                     <select 
                       {...register("brandingRequirement")}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue bg-white"
                     >
                       {pricingData.brandingOptions.map(b => (
                         <option key={b.id} value={b.id}>{b.name}</option>
@@ -207,7 +207,7 @@ export default function QuoteForm({ designState }: Props) {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Delivery Location</label>
                     <input 
                       {...register("deliveryLocation")}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue"
                       placeholder="City, State"
                     />
                   </div>
@@ -246,7 +246,7 @@ export default function QuoteForm({ designState }: Props) {
                   <textarea 
                     {...register("message")}
                     rows={4}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue resize-none"
                     placeholder="Tell us about any specific requirements..."
                   ></textarea>
                 </div>

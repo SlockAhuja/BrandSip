@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import WhyBrandSip from './components/WhyBrandSip';
-import HowItWorks from './components/HowItWorks';
+import BusinessStats from './components/BusinessStats';
 import Solutions from './components/Solutions';
+import HowItWorks from './components/HowItWorks';
+import LiveCustomizerPromotion from './components/LiveCustomizerPromotion';
+import WhyBrandSip from './components/WhyBrandSip';
+import UseCases from './components/UseCases';
+import BeforeAfter from './components/BeforeAfter';
+import TrustSection from './components/TrustSection';
 import BottleOptions from './components/BottleOptions';
 import QuoteCalculator from './components/QuoteCalculator';
 import BottleCustomizer from './components/BottleCustomizer';
-import BulkOrder from './components/BulkOrder';
 import QuoteForm from './components/QuoteForm';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
+import CtaSection from './components/CtaSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import type { DesignState } from './types/design';
@@ -26,20 +29,23 @@ function App() {
   });
 
   return (
-    <div className="min-h-screen font-sans bg-brand-light">
+    <div className="min-h-screen font-sans bg-white selection:bg-brand-aqua/30 selection:text-brand-navy">
       <Navbar />
       <main>
         <Hero />
-        <WhyBrandSip />
-        <HowItWorks />
+        <BusinessStats />
         <Solutions />
+        <HowItWorks />
+        <LiveCustomizerPromotion />
+        <WhyBrandSip />
+        <UseCases />
+        <BeforeAfter />
+        <TrustSection />
         <BottleOptions />
         <QuoteCalculator />
         <BottleCustomizer designState={designState} setDesignState={setDesignState} />
-        <BulkOrder />
         <QuoteForm designState={designState} />
-        <Testimonials />
-        <FAQ />
+        <CtaSection />
         <Contact />
       </main>
       <Footer />

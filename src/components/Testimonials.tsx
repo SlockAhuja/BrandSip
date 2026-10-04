@@ -26,7 +26,7 @@ export default function Testimonials() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <div className="text-3xl md:text-4xl font-black text-brand-cyan mb-2">{stat.value}</div>
+              <div className="text-3xl md:text-4xl font-black text-brand-aqua mb-2">{stat.value}</div>
               <div className="text-white/80 font-medium tracking-wide uppercase text-sm">{stat.label}</div>
             </motion.div>
           ))}

@@ -5,8 +5,8 @@ export default function BulkOrder() {
   return (
     <section className="py-20 bg-brand-navy text-white overflow-hidden relative">
       {/* Background elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-brand-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-cyan/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-brand-blue/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-aqua/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -17,7 +17,7 @@ export default function BulkOrder() {
             viewport={{ once: true }}
           >
             Planning an Event? <br className="hidden md:block" />
-            <span className="text-brand-cyan">Let's Bottle Your Brand.</span>
+            <span className="text-brand-aqua">Let's Bottle Your Brand.</span>
           </motion.h2>
           
           <motion.p 
@@ -36,7 +36,7 @@ export default function BulkOrder() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <a href="#quote" className="inline-flex items-center gap-2 bg-brand-cyan text-brand-navy font-bold px-8 py-4 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-cyan/20">
+            <a href="#quote" className="inline-flex items-center gap-2 bg-brand-aqua text-brand-navy font-bold px-8 py-4 rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-aqua/20">
               Request Bulk Quote <ArrowRight className="h-5 w-5" />
             </a>
           </motion.div>

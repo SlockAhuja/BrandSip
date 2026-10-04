@@ -29,7 +29,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="font-semibold text-brand-navy">{faq.question}</span>
-                <ChevronDown className={`h-5 w-5 text-brand-accent transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-5 w-5 text-brand-blue transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} />
               </button>
               
               <AnimatePresence>

@@ -52,7 +52,7 @@ export default function QuoteCalculator() {
                     <button 
                       key={p.id}
                       onClick={() => setSize(p.id)}
-                      className={`py-2 px-1 text-sm rounded-lg border font-medium transition-all ${size === p.id ? 'bg-brand-navy text-white border-brand-navy' : 'bg-white text-gray-600 border-gray-200 hover:border-brand-accent'}`}
+                      className={`py-2 px-1 text-sm rounded-lg border font-medium transition-all ${size === p.id ? 'bg-brand-navy text-white border-brand-navy' : 'bg-white text-gray-600 border-gray-200 hover:border-brand-blue'}`}
                     >
                       {p.name}
                     </button>
@@ -68,7 +68,7 @@ export default function QuoteCalculator() {
                   step="100"
                   value={quantity}
                   onChange={(e) => setQuantity(Math.max(100, parseInt(e.target.value) || 0))}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue"
                 />
               </div>
 
@@ -77,7 +77,7 @@ export default function QuoteCalculator() {
                 <select 
                   value={branding}
                   onChange={(e) => setBranding(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent appearance-none bg-white"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue appearance-none bg-white"
                 >
                   {pricingData.brandingOptions.map(b => (
                     <option key={b.id} value={b.id}>{b.name}</option>
@@ -90,7 +90,7 @@ export default function QuoteCalculator() {
                 <select 
                   value={delivery}
                   onChange={(e) => setDelivery(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent appearance-none bg-white"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue appearance-none bg-white"
                 >
                   {pricingData.deliveryOptions.map(d => (
                     <option key={d.id} value={d.id}>{d.name}</option>
@@ -109,7 +109,7 @@ export default function QuoteCalculator() {
               
               <div className="mb-8">
                 <div className="text-5xl font-bold mb-2">₹{totalPrice.toLocaleString('en-IN')}</div>
-                <div className="text-brand-cyan font-medium">Estimated Total</div>
+                <div className="text-brand-aqua font-medium">Estimated Total</div>
               </div>
 
               <div className="mb-8 border-t border-white/10 pt-8">
@@ -122,7 +122,7 @@ export default function QuoteCalculator() {
               </div>
               
               <div className="mt-8">
-                <a href="#quote" className="inline-block bg-brand-cyan text-brand-navy font-bold px-8 py-3 rounded-full hover:bg-white transition-colors duration-300">
+                <a href="#quote" className="inline-block bg-brand-aqua text-brand-navy font-bold px-8 py-3 rounded-full hover:bg-white transition-colors duration-300">
                   Request Official Quote
                 </a>
               </div>

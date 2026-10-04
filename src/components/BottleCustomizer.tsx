@@ -113,7 +113,7 @@ export default function BottleCustomizer({ designState, setDesignState }: Props)
                 value={designState.brandName}
                 onChange={(e) => updateDesign({ brandName: e.target.value })}
                 placeholder="Enter your brand or event name"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue"
               />
             </div>
 
@@ -147,7 +147,7 @@ export default function BottleCustomizer({ designState, setDesignState }: Props)
                       min="0.5" max="3" step="0.1" 
                       value={designState.scale}
                       onChange={(e) => updateDesign({ scale: parseFloat(e.target.value) })}
-                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-brand-accent"
+                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-brand-blue"
                     />
                     <div className="flex justify-between mt-3">
                       <button onClick={resetDesign} className="text-xs font-medium text-gray-500 hover:text-brand-navy flex items-center gap-1">
@@ -160,9 +160,9 @@ export default function BottleCustomizer({ designState, setDesignState }: Props)
                 <div>
                   <button 
                     onClick={() => fileInputRef.current?.click()}
-                    className="w-full py-10 border-2 border-dashed border-brand-accent/40 rounded-xl flex flex-col items-center justify-center text-gray-500 hover:bg-brand-light/50 transition-colors"
+                    className="w-full py-10 border-2 border-dashed border-brand-blue/40 rounded-xl flex flex-col items-center justify-center text-gray-500 hover:bg-brand-light/50 transition-colors"
                   >
-                    <Upload className="h-8 w-8 text-brand-accent mb-3" />
+                    <Upload className="h-8 w-8 text-brand-blue mb-3" />
                     <span className="font-bold text-brand-navy mb-1">Click to upload your design</span>
                     <span className="text-xs text-gray-500">PNG, JPG (Max 5MB)</span>
                   </button>
@@ -170,14 +170,14 @@ export default function BottleCustomizer({ designState, setDesignState }: Props)
                   <div className="mt-4 flex gap-3 justify-center">
                     <button 
                       onClick={() => loadSample('vertical')}
-                      className="text-xs font-medium text-brand-accent hover:underline"
+                      className="text-xs font-medium text-brand-blue hover:underline"
                     >
                       Try Vertical Sample
                     </button>
                     <span className="text-gray-300">|</span>
                     <button 
                       onClick={() => loadSample('horizontal')}
-                      className="text-xs font-medium text-brand-accent hover:underline"
+                      className="text-xs font-medium text-brand-blue hover:underline"
                     >
                       Try Horizontal Sample
                     </button>

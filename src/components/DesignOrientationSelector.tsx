@@ -15,12 +15,12 @@ export default function DesignOrientationSelector({ orientation, onChange }: Pro
           onClick={() => onChange('vertical')}
           className={`relative p-4 rounded-xl border-2 text-left transition-all duration-200 ${
             orientation === 'vertical'
-              ? 'border-brand-accent bg-brand-accent/5 shadow-md'
-              : 'border-gray-200 hover:border-brand-accent/50 hover:bg-gray-50'
+              ? 'border-brand-blue bg-brand-blue/5 shadow-md'
+              : 'border-gray-200 hover:border-brand-blue/50 hover:bg-gray-50'
           }`}
         >
           <div className="flex items-center gap-3 mb-2">
-            <Smartphone className={`h-6 w-6 ${orientation === 'vertical' ? 'text-brand-accent' : 'text-gray-400'}`} />
+            <Smartphone className={`h-6 w-6 ${orientation === 'vertical' ? 'text-brand-blue' : 'text-gray-400'}`} />
             <span className={`font-bold ${orientation === 'vertical' ? 'text-brand-navy' : 'text-gray-600'}`}>Vertical</span>
           </div>
           <p className="text-xs text-gray-500 font-medium mb-1">Portrait / Tall</p>
@@ -31,12 +31,12 @@ export default function DesignOrientationSelector({ orientation, onChange }: Pro
           onClick={() => onChange('horizontal')}
           className={`relative p-4 rounded-xl border-2 text-left transition-all duration-200 ${
             orientation === 'horizontal'
-              ? 'border-brand-accent bg-brand-accent/5 shadow-md'
-              : 'border-gray-200 hover:border-brand-accent/50 hover:bg-gray-50'
+              ? 'border-brand-blue bg-brand-blue/5 shadow-md'
+              : 'border-gray-200 hover:border-brand-blue/50 hover:bg-gray-50'
           }`}
         >
           <div className="flex items-center gap-3 mb-2">
-            <Monitor className={`h-6 w-6 ${orientation === 'horizontal' ? 'text-brand-accent' : 'text-gray-400'}`} />
+            <Monitor className={`h-6 w-6 ${orientation === 'horizontal' ? 'text-brand-blue' : 'text-gray-400'}`} />
             <span className={`font-bold ${orientation === 'horizontal' ? 'text-brand-navy' : 'text-gray-600'}`}>Horizontal</span>
           </div>
           <p className="text-xs text-gray-500 font-medium mb-1">Landscape / Wide</p>

@@ -8,11 +8,12 @@ export default {
     extend: {
       colors: {
         brand: {
-          navy: '#0A192F',
-          blue: '#112240',
-          cyan: '#64FFDA',
-          light: '#F8FAFC',
-          accent: '#0EA5E9'
+          navy: '#0B1F3A',
+          blue: '#087EA4',
+          aqua: '#18B6D9',
+          lightAqua: '#EAF8FC',
+          softBg: '#F5FAFC',
+          light: '#FFFFFF'
         }
       },
       fontFamily: {
