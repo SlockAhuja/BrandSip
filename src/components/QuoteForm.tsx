@@ -14,10 +14,17 @@ type QuoteFormData = {
   deliveryDate: string;
   deliveryLocation: string;
   brandingRequirement: string;
+  designOrientation: string;
   message: string;
 };
 
-export default function QuoteForm() {
+import type { DesignState } from '../types/design';
+
+interface Props {
+  designState?: DesignState;
+}
+
+export default function QuoteForm({ designState }: Props) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [logoFile, setLogoFile] = useState<File | null>(null);
@@ -30,6 +37,9 @@ export default function QuoteForm() {
     await new Promise(resolve => setTimeout(resolve, 1500));
     console.log('Form Data:', data);
     console.log('Logo File:', logoFile);
+    if (designState) {
+      console.log('Design State included in order:', designState);
+    }
     setIsSubmitting(false);
     setIsSuccess(true);
     reset();
@@ -140,6 +150,18 @@ export default function QuoteForm() {
                       placeholder="e.g. 500"
                     />
                     {errors.quantity && <p className="text-red-500 text-xs mt-1">{errors.quantity.message}</p>}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Design Orientation</label>
+                    <select 
+                      {...register("designOrientation")}
+                      defaultValue={designState?.orientation || 'vertical'}
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent bg-white"
+                    >
+                      <option value="vertical">Vertical (Portrait / Tall)</option>
+                      <option value="horizontal">Horizontal (Landscape / Wide)</option>
+                    </select>
                   </div>
 
                   <div>

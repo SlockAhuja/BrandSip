@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhyBrandSip from './components/WhyBrandSip';
@@ -12,8 +13,18 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import type { DesignState } from './types/design';
 
 function App() {
+  const [designState, setDesignState] = useState<DesignState>({
+    orientation: 'vertical',
+    logo: null,
+    brandName: 'Your Brand',
+    scale: 1,
+    positionX: 0,
+    positionY: 0
+  });
+
   return (
     <div className="min-h-screen font-sans bg-brand-light">
       <Navbar />
@@ -24,9 +35,9 @@ function App() {
         <Solutions />
         <BottleOptions />
         <QuoteCalculator />
-        <BottleCustomizer />
+        <BottleCustomizer designState={designState} setDesignState={setDesignState} />
         <BulkOrder />
-        <QuoteForm />
+        <QuoteForm designState={designState} />
         <Testimonials />
         <FAQ />
         <Contact />
