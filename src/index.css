@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #0A192F;
+  --color-brand-blue: #112240;
+  --color-brand-cyan: #64FFDA;
+  --color-brand-light: #F8FAFC;
+  --color-brand-accent: #0EA5E9;
+  --font-sans: 'Inter', sans-serif;
+}
 
 @layer base {
   html {
