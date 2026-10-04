@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Download } from 'lucide-react';
 import type { DesignState } from '../types/design';
-import BottleMockup from './BottleMockup';
+import Bottle3DViewer from './Bottle3DViewer';
 
 interface Props {
   isOpen: boolean;
@@ -36,12 +36,9 @@ export default function DesignPreview({ isOpen, onClose, design, fileDetails }: 
               <X className="w-5 h-5" />
             </button>
 
-            {/* Left side: large mockup */}
-            <div className="w-full md:w-1/2 bg-gray-50 p-8 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100">
-              {/* Reuse the mockup, but scale it up if needed. The existing BottleMockup is already quite nice. */}
-              <div className="scale-110">
-                <BottleMockup design={design} onDesignChange={() => {}} />
-              </div>
+            {/* Left side: 3D Viewer */}
+            <div className="w-full md:w-1/2 p-2 md:p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 bg-brand-softBg/30">
+              <Bottle3DViewer design={design} />
             </div>
 
             {/* Right side: details */}
@@ -68,9 +65,15 @@ export default function DesignPreview({ isOpen, onClose, design, fileDetails }: 
               <div className="flex gap-4">
                 <button 
                   onClick={() => {
-                    alert("In a real app, this would trigger a canvas snapshot of the bottle to download.");
+                    const canvas = document.getElementById('bottle-3d-canvas') as HTMLCanvasElement;
+                    if (canvas) {
+                      const link = document.createElement('a');
+                      link.download = 'BrandSip-3D-Preview.png';
+                      link.href = canvas.toDataURL('image/png');
+                      link.click();
+                    }
                   }}
-                  className="btn-secondary flex-1 flex justify-center items-center gap-2"
+                  className="btn-secondary flex-1 flex justify-center items-center gap-2 font-bold"
                 >
                   <Download className="w-4 h-4" /> Download Preview
                 </button>
