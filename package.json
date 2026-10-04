@@ -1,6 +1,7 @@
 {
   "name": "brandsip",
   "private": true,
+  "homepage": "https://slockahuja.github.io/BrandSip/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
